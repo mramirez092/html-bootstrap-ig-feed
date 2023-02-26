@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram Photo Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  </head>
+  <body>
+    
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <div>
+            <i class="fa-brands fa-instagram"></i>
+            <a class="navbar-brand">Instagram</a>
+          </div>
+          <div class="dropdown">
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Create a new post
+            </button>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Create a new post
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    Caption:
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control"
+                        placeholder="Leave a comment here"
+                        id="floatingTextarea2"
+                        style="height: 100px"
+                      ></textarea>
+                      <label for="floatingTextarea2">Comments</label>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-light mt-2"
+                      data-bs-dismiss="modal"
+                    >
+                      <i class="bi bi-camera-fill"></i>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-light mt-2"
+                      data-bs-dismiss="modal"
+                    >
+                      <i class="bi bi-geo-alt-fill"></i>
+                    </button>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+            <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+              <li><a class="dropdown-item border-bottom" href="#">Privacy and Data</a></li>
+              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+<div class="tab-selector">
+    <ul class="nav nav-tabs justify-content-center m-5" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+        </li>
+    </ul>
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+             <!--GRID-->
+             <div class="container">
+                <div class="row row-cols-3">
+                  <div class="col">
+                    <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ" class="card-img-top" alt="photo-1" height="100%" width="100%" style="object-fit: cover;">
+                  </div>
+                  <div class="col">
+                    <img src="https://images.indianexpress.com/2022/01/Friends-1200.jpg" class="card-img-top" alt="photo-2" height="100%" width="100%" style="object-fit: cover;">
+                  </div>
+                  <div class="col">
+                    <img src="https://expertphotography.b-cdn.net/wp-content/uploads/2022/05/Landscape-Photography-Sophie-Turner.jpg" class="card-img-top" alt="photo-3" height="100%" width="100%" style="object-fit: cover;">
+
+                  </div>
+                  <div class="pt-2 col">
+                    <img src="https://a.cdn-hotels.com/gdcs/production133/d1207/7ad2d7f0-68ce-11e8-8a0f-0242ac11000c.jpg" class="card-img-top" alt="photo-4" height="100%" width="100%" style="object-fit: cover;">
+
+                  </div>
+
+                  <div class="pt-2 col">
+                    <img src="https://imagenes.elpais.com/resizer/elGQL0GmeUTR_xUL3rrpOkMVwx8=/1960x1470/filters:focal(1745x609:1755x619)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/7G364PMCSFGIHFZNHHJLNQL4SU.jpg" class="card-img-top" alt="photo-5" height="100%" width="100%" style="object-fit: cover;">
+                  </div>
+
+                  <div class="pt-2 col">
+                    <img src="https://www.computersciencedegreehub.com/wp-content/uploads/2016/02/what-is-coding-1024x683.jpg" class="card-img-top" alt="photo-6" height="100%" width="100%" style="object-fit: cover;">
+                  </div>
+
+                  <div class="pt-2 col">
+                    <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFyJUMzJUFEcyUyQyUyMGZyYW5jaWF8ZW58MHx8MHx8&w=1000&q=80" class="card-img-top" alt="photo-7" height="60%" width="100%" style="object-fit: cover;">
+                  </div>
+
+                  <div class="pt-2 col">
+                    <img src="https://www.autonocion.com/wp-content/uploads/2021/04/Lightweight-BMW-M2-Competition-Finale-Edition-26.jpg" class="card-img-top" alt="photo-8" height="60%" width="100%" style="object-fit: cover;">
+                  </div>
+
+                  <div class="pt-2 col">
+                    <img src="https://media.revistagq.com/photos/620e38dcc789a63cc825a53f/16:9/w_1280,c_limit/drive-to-survive-4-netflix-fecha.jpeg" class="card-img-top" alt="photo-9" height="60%" width="100%" style="object-fit: cover;">
+                  </div>
+                </div>
+              </div>
+
+        </div>
+        
+        <div class="d-flex tab-pane fade justify-content-center" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+            <!--SQUARE-->
+            <div class="container-post">
+                <div class="row">
+                  <div class="col1">
+                    <div class="card" style="width: 500px; height: auto;">
+                        <div class="d-flex header-post justify-content-between m-3">
+                            <h3>My Crazy dog Spark!</h3>
+                            <p>08/21</p>
+                        </div>
+                        <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p><b>204 Likes</b></p>
+                          <p class="card-text">This is a card as an example of a real Instagram post. It contains a header, an image and a caption.</p>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+                 
+                  <div class="col pt-4">
+                    <div class="card" style="width: 500px; height: auto;">
+                        <div class="d-flex header-post justify-content-between m-3">
+                            <h3>Spending Time with friends!</h3>
+                            <p>08/22</p>
+                        </div>
+                        <img src="https://images.indianexpress.com/2022/01/Friends-1200.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><b>151 Likes</b></p>
+                          <p class="card-text">This is a card as an example of a real Instagram post. It contains a header, an image and a caption.</p>
+                        </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col pt-4">
+                    <div class="card" style="width: 500px; height: auto;">
+                        <div class="d-flex header-post justify-content-between m-3">
+                            <h3>What a view!</h3>
+                            <p>08/22</p>
+                        </div>
+                        <img src="https://expertphotography.b-cdn.net/wp-content/uploads/2022/05/Landscape-Photography-Sophie-Turner.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><b>250 Likes</b></p>
+                          <p class="card-text">This is a card as an example of a real Instagram post. It contains a header, an image and a caption.</p>
+                        </div>
+                      </div>
+                  </div>
+                 
+                  <div class="col pt-4">
+                    <div class="card" style="width: 500px; height: auto;">
+                        <div class="d-flex header-post justify-content-between m-3">
+                            <h3>Hello Madrid...</h3>
+                            <p>08/22</p>
+                        </div>
+                        <img src="https://a.cdn-hotels.com/gdcs/production133/d1207/7ad2d7f0-68ce-11e8-8a0f-0242ac11000c.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><b>500 Likes</b></p>
+                          <p class="card-text">This is a card as an example of a real Instagram post. It contains a header, an image and a caption.</p>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col pt-4">
+                    <div class="card" style="width: 500px; height: auto;">
+                        <div class="d-flex header-post justify-content-between m-3">
+                            <h3>The best soccer player</h3>
+                            <p>08/22</p>
+                        </div>
+                        <img src="https://imagenes.elpais.com/resizer/elGQL0GmeUTR_xUL3rrpOkMVwx8=/1960x1470/filters:focal(1745x609:1755x619)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/7G364PMCSFGIHFZNHHJLNQL4SU.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><b>340 Likes</b></p>
+                          <p class="card-text">This is a card as an example of a real Instagram post. It contains a header, an image and a caption.</p>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col pt-4">
+                    <div class="card" style="width: 500px; height: auto;">
+                        <div class="d-flex header-post justify-content-between m-3">
+                            <h3>Coding</h3>
+                            <p>08/22</p>
+                        </div>
+                        <img src="https://www.computersciencedegreehub.com/wp-content/uploads/2016/02/what-is-coding-1024x683.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><b>788Likes</b></p>
+                          <p class="card-text">This is a card as an example of a real Instagram post. It contains a header, an image and a caption.</p>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col pt-4">
+                    <div class="card" style="width: 500px; height: auto;">
+                        <div class="d-flex header-post justify-content-between m-3">
+                            <h3>My trip in Paris</h3>
+                            <p>08/22</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFyJUMzJUFEcyUyQyUyMGZyYW5jaWF8ZW58MHx8MHx8&w=1000&q=80" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><b>300 Likes</b></p>
+                          <p class="card-text">This is a card as an example of a real Instagram post. It contains a header, an image and a caption.</p>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col pt-4">
+                    <div class="card" style="width: 500px; height: auto;">
+                        <div class="d-flex header-post justify-content-between m-3">
+                            <h3>My dream car</h3>
+                            <p>08/22</p>
+                        </div>
+                        <img src="https://www.autonocion.com/wp-content/uploads/2021/04/Lightweight-BMW-M2-Competition-Finale-Edition-26.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><b>414 Likes</b></p>
+                          <p class="card-text">This is a card as an example of a real Instagram post. It contains a header, an image and a caption.</p>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col pt-4">
+                    <div class="card" style="width: 500px; height: auto;">
+                        <div class="d-flex header-post justify-content-between m-3">
+                            <h3>F1 is about to start this year!</h3>
+                            <p>08/22</p>
+                        </div>
+                        <img src="https://media.revistagq.com/photos/620e38dcc789a63cc825a53f/16:9/w_1280,c_limit/drive-to-survive-4-netflix-fecha.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><b>204 Likes</b></p>
+                          <p class="card-text">This is a card as an example of a real Instagram post. It contains a header, an image and a caption.</p>
+                        </div>
+                      </div>
+                  </div>
+            
+
+        </div>
+      </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
